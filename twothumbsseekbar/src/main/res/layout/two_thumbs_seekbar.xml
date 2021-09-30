@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:id="@+id/rangebar_container"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_height="wrap_content">
+
+		<!--
+		two thumbs
+		-->
+		<RelativeLayout
+			android:id="@+id/middle_bar"
+			android:layout_height="wrap_content"
+			android:layout_width="0dp"
+			android:layout_weight="1">
+			<!--
+			Line
+			-->
+			<View
+				android:id="@+id/middle_view"
+				android:layout_width="match_parent"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/left_thumb"
+				android:layout_toLeftOf="@+id/right_thumb"
+				android:background="@android:color/darker_gray"
+				android:layout_height="5dp"/>
+			<ImageView
+				android:id="@+id/left_thumb"
+				android:adjustViewBounds="true"
+				android:layout_centerVertical="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:src="@drawable/more_than_container"/>
+			<ImageView
+				android:id="@+id/right_thumb"
+				android:adjustViewBounds="true"
+				android:layout_centerVertical="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:src="@drawable/less_than_container"/>
+		</RelativeLayout>
+	</LinearLayout>
+
+	<!--
+	Text below
+	-->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:background="@android:color/black"
+			android:textColor="@android:color/white"
+			android:id="@+id/tv_range_min"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@android:color/black"
+			android:textColor="@android:color/white"
+			android:layout_alignParentRight="true"
+			android:id="@+id/tv_range_max"/>
+	</RelativeLayout>
+
+</LinearLayout>
